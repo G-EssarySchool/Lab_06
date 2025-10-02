@@ -21,7 +21,7 @@ public class Task1 {
         } while (!done);
         
         tempF = (tempC * 9/5) + 32;
-        System.out.printf("%-13s%7.5s", "Degrees C:", tempC);
-        System.out.printf("\n%-13s%7.5s", "Degrees F:", tempF);
+        System.out.printf("%-13s%7.2f", "Degrees C:", tempC);
+        System.out.printf("\n%-13s%7.2f", "Degrees F:", tempF);
     }
 }
