@@ -6,6 +6,8 @@ public class Task2 {
         double gallonsOfGas = 0;
         double fuelEfficiency = 0;
         double pricePerGallon = 0;
+        double remainingDistance;
+        double costOfHundredMiles;
         boolean done1 = false;
         boolean done2 = false;
         boolean done3 = false;
@@ -17,8 +19,7 @@ public class Task2 {
                 gallonsOfGas = scan.nextDouble();
                 done1 = true;
                 scan.nextLine();
-            }
-            else {
+            } else {
                 System.out.println("You have entered an invalid value for gas. Please try again.");
                 scan.nextLine();
             }
@@ -31,8 +32,7 @@ public class Task2 {
                 fuelEfficiency = scan.nextDouble();
                 done2 = true;
                 scan.nextLine();
-            }
-            else {
+            } else {
                 System.out.println("You have entered an invalid fuel efficiency. Please try again.");
                 scan.nextLine();
             }
@@ -51,9 +51,9 @@ public class Task2 {
             }
         } while (!done3);
 
-
-
-
-
+        remainingDistance = gallonsOfGas * fuelEfficiency;
+        costOfHundredMiles = (100 / fuelEfficiency) * pricePerGallon;
+        System.out.printf("%-13s%12.2f", "Cost per 100 miles in $:", costOfHundredMiles);
+        System.out.printf("\n%-13s%13.2f", "Distance Left in Miles:", remainingDistance);
     }
 }
